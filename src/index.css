@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary - Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 217 91% 95%;
+    
+    /* Secondary - Cool gray */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Semantic colors */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 160 76% 95%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 38 92% 95%;
+    
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+    --danger-soft: 0 84% 95%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Surface colors */
+    --surface: 220 14% 98%;
+    --surface-hover: 220 14% 94%;
+    --surface-active: 220 14% 90%;
+    
+    /* Border & input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Agent status colors */
+    --agent-analyzing: 217 91% 60%;
+    --agent-context: 262 83% 58%;
+    --agent-scheduling: 160 84% 39%;
+    --agent-evaluating: 38 92% 50%;
+    
+    /* Confidence gradient */
+    --confidence-low: 0 84% 60%;
+    --confidence-medium: 38 92% 50%;
+    --confidence-high: 160 84% 39%;
+    
+    /* Sidebar */
+    --sidebar-background: 220 14% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 94%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 217 91% 15%;
+    
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 160 84% 15%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 38 92% 15%;
+    
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+    --danger-soft: 0 84% 15%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --surface: 222 47% 8%;
+    --surface-hover: 222 47% 12%;
+    --surface-active: 222 47% 15%;
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+    
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Glass morphism card */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-lg;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-success bg-clip-text text-transparent;
+  }
+  
+  /* Agent pulse animation */
+  .agent-pulse {
+    animation: agent-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes agent-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Confidence ring animation */
+  .confidence-ring {
+    animation: confidence-fill 1.5s ease-out forwards;
+  }
+  
+  @keyframes confidence-fill {
+    from {
+      stroke-dashoffset: 283;
+    }
+  }
+  
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted-foreground) / 0.1) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Glow effect */
+  .glow-primary {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.3);
+  }
+  
+  .glow-success {
+    box-shadow: 0 0 40px hsl(var(--success) / 0.3);
+  }
+}
+
+@layer utilities {
+  /* Scrollbar styling */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
