@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Try_Now-4F46E5?style=for-the-badge)](https://lovable.dev/projects/4fd9d91d-fcd2-41f5-843c-e3b694b3dc9e)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Try_Now-4F46E5?style=for-the-badge)]((https://productivity-ai-agent.netlify.app/))
 
 **AI that learns when YOU work best and schedules tasks accordingly**
 
@@ -382,11 +382,10 @@ Built with:
 
 ---
 
-## 📞 Contact
 
-- **Live Demo:** https://lovable.dev/projects/4fd9d91d-fcd2-41f5-843c-e3b694b3dc9e
-- **Issues:** https://github.com/yourusername/productivityai/issues
-- **Email:** hello@productivityai.dev
+
+- **Live Demo:** [lINK ](https://productivity-ai-agent.netlify.app/)
+
 
 ---
 
