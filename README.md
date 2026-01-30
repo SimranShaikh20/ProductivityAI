@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Try_Now-4F46E5?style=for-the-badge)]((https://productivity-ai-agent.netlify.app/))
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Try_Now-4F46E5?style=for-the-badge)](https://productivity-ai-agent.netlify.app/)
 
 **AI that learns when YOU work best and schedules tasks accordingly**
 
@@ -384,7 +384,7 @@ Built with:
 
 
 
-- **Live Demo:** [lINK ](https://productivity-ai-agent.netlify.app/)
+- **Live Demo:** [LINK ](https://productivity-ai-agent.netlify.app/)
 
 
 ---
